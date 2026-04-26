@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drag Papers</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body class="question-mode">
+
+  <main class="proposal-screen" id="proposalScreen">
+    <img class="deco tl" src="images/flower.png" alt="">
+    <img class="deco tr" src="images/flower2.png" alt="">
+    <img class="deco bl" src="images/bow.png" alt="">
+    <img class="deco br" src="images/flower.png" alt="">
+
+    <section class="proposal-card">
+      <p id="questionText" class="typewriter-text"></p>
+      <div class="answer-row">
+        <button class="answer-btn yes-btn" id="yesBtn" type="button">Yes</button>
+        <button class="answer-btn no-btn" id="noBtn" type="button">No</button>
+      </div>
+    </section>
+  </main>
+
+  <main class="song-screen" id="songScreen" aria-hidden="true">
+    <img class="deco tl" src="images/flower.png" alt="">
+    <img class="deco tr" src="images/flower2.png" alt="">
+    <img class="deco bl" src="images/bow.png" alt="">
+    <img class="deco br" src="images/flower.png" alt="">
+
+    <section class="proposal-card song-card">
+      <p class="song-question">
+        This song is dedicated to you. Do you want to play the song to feel more and are you ready to see the surprise?
+      </p>
+      <div class="answer-row">
+        <button class="answer-btn yes-btn" id="songYesBtn" type="button">Yes</button>
+        <button class="answer-btn no-btn" id="songNoBtn" type="button">No</button>
+      </div>
+    </section>
+  </main>
+
+  <audio id="loveSong" src="Enna Sona Ok Jaanu.mp3" preload="auto"></audio>
+
+  <main class="memory-screen" id="memoryScreen" aria-hidden="true">
+
+  <!-- ===== CORNER DECORATIONS ===== -->
+  <img class="deco tl" src="images/flower.png" alt="">
+  <img class="deco tr" src="images/flower2.png" alt="">
+  <img class="deco bl" src="images/bow.png" alt="">
+  <img class="deco br" src="images/flower.png" alt="">
+
+  <!-- ===== IMAGE CARDS ===== -->
+  <div class="paper image image-one" data-x="-34" data-y="-74" data-rot="-7" data-z="19">
+    <div class="photo-frame">
+      <img src="images/1.jpeg" alt="">
+    </div>
+    <p>Love with You &#128525;</p>
+  </div>
+
+  <div class="paper image image-two stamp" data-x="16" data-y="-68" data-rot="6" data-z="18">
+    <div class="photo-frame">
+      <img src="images/2.jpeg" alt="">
+    </div>
+    <p>My favorite smile</p>
+  </div>
+
+  <div class="paper image image-three" data-x="-24" data-y="-24" data-rot="-9" data-z="16">
+    <div class="photo-frame">
+      <img src="images/3.jpeg" alt="">
+    </div>
+    <p>So cute &#10084;&#65039;</p>
+  </div>
+
+  <div class="paper image image-four stamp" data-x="24" data-y="-16" data-rot="-6" data-z="15">
+    <div class="photo-frame">
+      <img src="images/4.jpeg" alt="">
+    </div>
+    <p>My pretty girl</p>
+  </div>
+
+  <div class="paper image image-five stamp" data-x="12" data-y="18" data-rot="5" data-z="13">
+    <div class="photo-frame">
+      <img src="images/5.jpeg" alt="">
+    </div>
+    <p>Always special</p>
+  </div>
+
+  <!-- ===== HEART PAPER ===== -->
+  <div class="paper heart" data-x="0" data-y="52" data-rot="-8" data-z="12"></div>
+
+  <!-- ===== TEXT PAPERS ===== -->
+  <div class="paper note red" data-x="6" data-y="2" data-rot="8" data-z="14">
+    <p class="p1">and My Favorite</p>
+    <p class="p2">Person &#128525;</p>
+  </div>
+
+  <div class="paper note" data-x="-8" data-y="-42" data-rot="-12" data-z="17">
+    <p class="p1">You are Cute</p>
+    <p class="p1">Amazing <span class="heart-text">&#10084;&#65039;</span></p>
+  </div>
+
+  <div class="paper text-sticker small-note" data-x="0" data-y="-64" data-rot="2" data-z="20">
+    <p class="p1">Drag the papers to move!</p>
+  </div>
+
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+</html>
