@@ -124,22 +124,32 @@ songYesBtn?.addEventListener('click', () => {
     loveSong.volume = 0;
     
     const playWithFade = () => {
-      loveSong.currentTime = 83;
-      loveSong.play().then(() => {
-        loveSong.currentTime = 83; // Try once more after play starts
-        const fadeDuration = 3500;
-        const startedAt = performance.now();
+      loveSong.addEventListener('canplaythrough', async () => {
+        try {
+          loveSong.currentTime = 83; // starts from 1:23
+          loveSong.volume = 0;
 
-        function fadeIn(now) {
-          const progress = Math.min(1, (now - startedAt) / fadeDuration);
-          loveSong.volume = progress;
-          if (progress < 1) {
-            requestAnimationFrame(fadeIn);
+          await loveSong.play();
+
+          const fadeDuration = 3500;
+          const startedAt = performance.now();
+
+          function fadeIn(now) {
+            const progress = Math.min(1, (now - startedAt) / fadeDuration);
+            loveSong.volume = progress;
+
+            if (progress < 1) {
+              requestAnimationFrame(fadeIn);
+            }
           }
-        }
 
-        requestAnimationFrame(fadeIn);
-      }).catch(() => {});
+          requestAnimationFrame(fadeIn);
+        } catch (err) {
+          console.log("Audio error:", err);
+        }
+      }, { once: true });
+
+      loveSong.load();
     };
 
     if (loveSong.readyState >= 1) {
@@ -155,17 +165,7 @@ songYesBtn?.addEventListener('click', () => {
 });
 
 // ---------------------------------------------------------
-// FIX: Python's local http.server doesn't support "seeking" (Range requests).
-// We bypass this completely by downloading the song into memory as a Blob,
-// which makes the browser capable of jumping to 1m23s instantly.
-if (loveSong && loveSong.src) {
-  fetch(loveSong.src)
-    .then(res => res.blob())
-    .then(blob => {
-      loveSong.src = URL.createObjectURL(blob);
-    })
-    .catch(() => {});
-}
+
 
 songNoBtn?.addEventListener('pointerenter', () => moveNoButton(songNoBtn));
 songNoBtn?.addEventListener('pointerdown', (event) => {
