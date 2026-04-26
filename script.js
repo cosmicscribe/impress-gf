@@ -121,35 +121,29 @@ noBtn?.addEventListener('pointerdown', (event) => {
 
 songYesBtn?.addEventListener('click', () => {
   if (loveSong) {
-    loveSong.volume = 0;
-    
-    const playWithFade = () => {
-      loveSong.addEventListener('canplaythrough', async () => {
-        try {
-          loveSong.currentTime = 83; // starts from 1:23
-          loveSong.volume = 0;
+    const playWithFade = async () => {
+      try {
+        loveSong.currentTime = 83; // start from 1:23
+        loveSong.volume = 0;
 
-          await loveSong.play();
+        await loveSong.play();
 
-          const fadeDuration = 3500;
-          const startedAt = performance.now();
+        const fadeDuration = 3500;
+        const startedAt = performance.now();
 
-          function fadeIn(now) {
-            const progress = Math.min(1, (now - startedAt) / fadeDuration);
-            loveSong.volume = progress;
+        function fadeIn(now) {
+          const progress = Math.min(1, (now - startedAt) / fadeDuration);
+          loveSong.volume = progress;
 
-            if (progress < 1) {
-              requestAnimationFrame(fadeIn);
-            }
+          if (progress < 1) {
+            requestAnimationFrame(fadeIn);
           }
-
-          requestAnimationFrame(fadeIn);
-        } catch (err) {
-          console.log("Audio error:", err);
         }
-      }, { once: true });
 
-      loveSong.load();
+        requestAnimationFrame(fadeIn);
+      } catch (err) {
+        console.log("Audio error:", err);
+      }
     };
 
     if (loveSong.readyState >= 1) {
@@ -159,6 +153,7 @@ songYesBtn?.addEventListener('click', () => {
       loveSong.load();
     }
   }
+
   document.body.classList.remove('song-mode');
   document.body.classList.add('memory-mode');
   memoryScreen?.setAttribute('aria-hidden', 'false');
