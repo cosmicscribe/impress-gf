@@ -98,7 +98,7 @@ body.memory-mode .memory-screen {
   font-size: clamp(18px, 1.65vw, 24px);
   line-height: 0.98;
   color: rgb(22, 34, 118);
-  transform: translateY(92px);
+  transform: translateY(62px);
 }
 
 .song-question {
@@ -140,6 +140,7 @@ body.memory-mode .memory-screen {
   border-radius: 999px;
   padding: 12px 26px;
   font-family: 'Zeyada', cursive;
+  font-weight: 600;
   font-size: 34px;
   line-height: 1;
   color: rgb(22, 34, 118);
@@ -224,7 +225,7 @@ body.memory-mode .memory-screen {
   z-index: 2;
   width: clamp(320px, 28vw, 440px);
   aspect-ratio: 689 / 345;
-  padding: clamp(58px, 5vw, 76px) clamp(132px, 10vw, 164px) clamp(48px, 4vw, 60px) clamp(42px, 3.5vw, 58px);
+  padding: clamp(70px, 5.7vw, 88px) clamp(108px, 8vw, 136px) clamp(46px, 4vw, 58px) clamp(48px, 4vw, 64px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -242,7 +243,7 @@ body.memory-mode .memory-screen {
   z-index: 8;
   width: clamp(320px, 31vw, 470px);
   aspect-ratio: 689 / 345;
-  padding: clamp(58px, 5vw, 76px) clamp(132px, 10vw, 164px) clamp(48px, 4vw, 60px) clamp(42px, 3.5vw, 58px);
+  padding: clamp(70px, 5.7vw, 88px) clamp(108px, 8vw, 136px) clamp(46px, 4vw, 58px) clamp(48px, 4vw, 64px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -252,7 +253,7 @@ body.memory-mode .memory-screen {
 
 .text-sticker p {
   font-size: clamp(26px, 2.35vw, 36px);
-  line-height: 1;
+  line-height: 0.95;
   max-width: 100%;
 }
 
@@ -272,18 +273,20 @@ body.memory-mode .memory-screen {
 }
 
 .image p {
-  width: clamp(150px, 13vw, 220px);
+  width: clamp(170px, 15vw, 260px);
   aspect-ratio: 689 / 345;
   min-height: 0;
-  padding: clamp(36px, 3.2vw, 48px) clamp(58px, 4.8vw, 72px) 0 clamp(15px, 1.3vw, 20px);
+  padding: clamp(40px, 3.5vw, 54px) clamp(42px, 3.5vw, 58px) clamp(18px, 1.7vw, 28px) clamp(28px, 2.3vw, 40px);
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
-  font-size: clamp(17px, 1.45vw, 22px);
-  line-height: 0.82;
+  font-size: clamp(16px, 1.32vw, 21px);
+  line-height: 0.9;
   margin: clamp(-56px, -4.2vw, -40px) 0 0;
   text-align: center;
-  white-space: nowrap;
+  white-space: normal;
+  overflow-wrap: normal;
+  text-wrap: balance;
   background: url("images/text_frame_card.png") center / contain no-repeat;
   filter: drop-shadow(0 5px 7px rgba(22, 28, 46, 0.12));
 }
@@ -353,18 +356,22 @@ p {
   font-size: clamp(25px, 2.2vw, 32px);
   line-height: 1.05;
   color: rgb(22, 34, 118);
-  opacity: 0.9;
+  font-weight: 600;
+  opacity: 0.96;
   text-align: center;
   user-select: none;
+  text-shadow: 0 0 0.01px currentColor;
 }
 
 .note p,
 .text-sticker p {
-  transform: translateY(20px);
+  max-width: 100%;
+  transform: translateY(8px);
+  text-wrap: balance;
 }
 
 .note:not(.small-note) p {
-  white-space: nowrap;
+  white-space: normal;
 }
 
 .red p {
@@ -391,7 +398,7 @@ p {
     min-height: 220px;
     font-size: 18px;
     line-height: 1;
-    transform: translateY(72px);
+    transform: translateY(52px);
   }
 
   .answer-row {
@@ -412,16 +419,13 @@ p {
   .note,
   .text-sticker {
     width: min(86vw, 360px);
-    padding: 44px 112px 36px 34px;
+    padding: 56px 88px 36px 38px;
   }
 
   .image p {
-    width: min(54vw, 190px);
-    padding-right: 50px;
-    padding-left: 14px;
-    padding-top: 38px;
-    padding-bottom: 0;
-    font-size: 18px;
+    width: min(62vw, 220px);
+    padding: 40px 38px 16px 26px;
+    font-size: 17px;
     margin-top: -44px;
   }
 

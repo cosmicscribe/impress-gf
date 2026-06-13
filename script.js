@@ -1,6 +1,9 @@
 let highestZ = 30;
-const question =
-  'hey.. Nomro, literally I fall in love day by day with you and it feels harder, and I want to spend the rest of my life with you. Do you really want to spend the rest of your life with me?';
+const question = `Heyyy Kanishka ji 🥺🌷
+Kal thodi si galti ho gayi thi aur maine aapko gussa dila diya 🫠... uske liye sorryyy 🐥💛
+Waise jab aap naraz hote ho na, toh mujhe sach mein thoda darr lagta hai 🥶👉👈
+Toh batao, maaf kiya ya abhi bhi gussa ho? 😫💕
+Agar maaf kar diya hai toh Yesss pe click karo... next surprise aapka wait kar raha hai 🤭`;
 
 const questionText = document.querySelector('#questionText');
 const yesBtn = document.querySelector('#yesBtn');
@@ -10,7 +13,7 @@ const songNoBtn = document.querySelector('#songNoBtn');
 const loveSong = document.querySelector('#loveSong');
 const memoryScreen = document.querySelector('#memoryScreen');
 
-const songQuestion = "This song is dedicated to you. Do you want to play the song to feel more and are you ready to see the surprise?";
+const songQuestion = "This song is dedicated to you. And apka kyu ka answer next page pr h..dekhna hai?👀 ";
 const songQuestionText = document.querySelector('.song-question');
 
 function typeQuestion(index = 0) {
