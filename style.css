@@ -388,25 +388,17 @@ p {
   }
 
   .proposal-card {
-    width: min(96vw, 520px);
-    min-height: 330px;
-    padding: 100px 66px 46px 48px;
+    width: min(94vw, 420px);
+    min-height: 430px;
+    padding: 120px 88px 46px 34px;
   }
 
   .typewriter-text {
-    width: min(100%, 390px);
-    min-height: 170px;
-    font-size: clamp(16px, 4.4vw, 18px);
-    line-height: 0.96;
-    transform: translateY(42px);
-  }
-
-  .song-question {
-    width: min(100%, 390px);
-    min-height: 150px;
-    font-size: clamp(24px, 7vw, 30px);
-    line-height: 0.95;
-    transform: translateY(44px);
+    width: min(100%, 300px);
+    min-height: 220px;
+    font-size: 18px;
+    line-height: 1;
+    transform: translateY(52px);
   }
 
   .answer-row {
