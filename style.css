@@ -401,6 +401,10 @@ p {
     transform: translateY(104px);
   }
 
+  .song-question {
+    transform: translateY(98px);
+  }
+
   .answer-row {
     gap: 14px;
   }
