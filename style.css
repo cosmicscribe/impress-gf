@@ -398,7 +398,7 @@ p {
     min-height: 220px;
     font-size: clamp(14px, 3.8vw, 16px);
     line-height: 0.9;
-    transform: translateY(76px);
+    transform: translateY(104px);
   }
 
   .answer-row {
