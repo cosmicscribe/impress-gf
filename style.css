@@ -396,9 +396,9 @@ p {
   .typewriter-text {
     width: min(100%, 300px);
     min-height: 220px;
-    font-size: 18px;
-    line-height: 1;
-    transform: translateY(52px);
+    font-size: clamp(14px, 3.8vw, 16px);
+    line-height: 0.9;
+    transform: translateY(56px);
   }
 
   .answer-row {
